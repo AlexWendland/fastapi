@@ -26,9 +26,7 @@
 
 Напишите простое утверждение с `assert` дабы проверить истинность Python-выражения (это тоже стандарт `pytest`).
 
-```Python hl_lines="2  12  15-18"
-{!../../docs_src/app_testing/tutorial001.py!}
-```
+{* ../../docs_src/app_testing/tutorial001.py hl[2,12,15:18] *}
 
 /// tip | Подсказка
 
@@ -74,9 +72,7 @@
 Здесь файл `main.py` является "точкой входа" в Ваше приложение и содержит инициализацию Вашего приложения **FastAPI**:
 
 
-```Python
-{!../../docs_src/app_testing/main.py!}
-```
+{* ../../docs_src/app_testing/main.py *}
 
 ### Файл тестов
 
@@ -92,9 +88,7 @@
 
 Так как оба файла находятся в одной директории, для импорта объекта приложения из файла `main` в файл `test_main` Вы можете использовать относительный импорт:
 
-```Python hl_lines="3"
-{!../../docs_src/app_testing/test_main.py!}
-```
+{* ../../docs_src/app_testing/test_main.py hl[3] *}
 
 ...и писать дальше тесты, как и раньше.
 
@@ -122,65 +116,13 @@
 
 Обе *операции пути* требуют наличия в запросе заголовка `X-Token`.
 
-//// tab | Python 3.10+
-
-```Python
-{!> ../../docs_src/app_testing/app_b_an_py310/main.py!}
-```
-
-////
-
-//// tab | Python 3.9+
-
-```Python
-{!> ../../docs_src/app_testing/app_b_an_py39/main.py!}
-```
-
-////
-
-//// tab | Python 3.8+
-
-```Python
-{!> ../../docs_src/app_testing/app_b_an/main.py!}
-```
-
-////
-
-//// tab | Python 3.10+ без Annotated
-
-/// tip | Подсказка
-
-По возможности используйте версию с `Annotated`.
-
-///
-
-```Python
-{!> ../../docs_src/app_testing/app_b_py310/main.py!}
-```
-
-////
-
-//// tab | Python 3.8+  без Annotated
-
-/// tip | Подсказка
-
-По возможности используйте версию с `Annotated`.
-
-///
-
-```Python
-{!> ../../docs_src/app_testing/app_b/main.py!}
-```
-
-////
+{* ../../docs_src/app_testing/app_b_an_py310/main.py *}
 
 ### Расширенный файл тестов
 
 Теперь обновим файл `test_main.py`, добавив в него тестов:
 
-```Python
-{!> ../../docs_src/app_testing/app_b/test_main.py!}
-```
+{* ../../docs_src/app_testing/app_b/test_main.py *}
 
 Если Вы не знаете, как передать информацию в запросе, можете воспользоваться поисковиком (погуглить) и задать вопрос: "Как передать информацию в запросе с помощью `httpx`", можно даже спросить: "Как передать информацию в запросе с помощью `requests`", поскольку дизайн HTTPX основан на дизайне Requests.
 
