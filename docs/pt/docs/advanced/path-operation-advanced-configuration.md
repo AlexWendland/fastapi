@@ -153,21 +153,7 @@ E você pode fazer isso até mesmo quando os dados da requisição não seguem o
 
 Por exemplo, nesta aplicação nós não usamos a funcionalidade integrada ao FastAPI de extrair o esquema JSON dos modelos Pydantic nem a validação automática do JSON. Na verdade, estamos declarando o tipo do conteúdo da requisição como YAML, em vez de JSON:
 
-//// tab | Pydantic v2
-
-```Python hl_lines="17-22  24"
-{!> ../../docs_src/path_operation_advanced_configuration/tutorial007.py!}
-```
-
-////
-
-//// tab | Pydantic v1
-
-```Python hl_lines="17-22  24"
-{!> ../../docs_src/path_operation_advanced_configuration/tutorial007_pv1.py!}
-```
-
-////
+{* ../../docs_src/path_operation_advanced_configuration/tutorial007.py hl[17:22,24] *}
 
 /// info | Informação
 
@@ -181,21 +167,7 @@ Então utilizamos a requisição diretamente, e extraímos o corpo como `bytes`.
 
 E então no nosso código, nós analisamos o conteúdo YAML diretamente, e estamos utilizando o mesmo modelo Pydantic para validar o conteúdo YAML:
 
-//// tab | Pydantic v2
-
-```Python hl_lines="26-33"
-{!> ../../docs_src/path_operation_advanced_configuration/tutorial007.py!}
-```
-
-////
-
-//// tab | Pydantic v1
-
-```Python hl_lines="26-33"
-{!> ../../docs_src/path_operation_advanced_configuration/tutorial007_pv1.py!}
-```
-
-////
+{* ../../docs_src/path_operation_advanced_configuration/tutorial007.py hl[26:33] *}
 
 /// info | Informação
 
